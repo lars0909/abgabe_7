@@ -17,13 +17,13 @@ var pp03;
 function normal(country, pp, pp03) {
     document.querySelector("#people").innerHTML = (pp / 1000000).toFixed(1) + "Mio";
     document.querySelector("#text").innerHTML = "Gesamtzahl Einwohnerinnen und Einwohner in " + country + " in 2022";
-    document.querySelector("#relativ").innerHTML = (pp / people_eu * 100).toFixed(1) + "%";
-    document.querySelector("#rate").innerHTML = ((pp / pp03 - 1) * 100).toFixed(2) + "%";
+    document.querySelector("#relativ").innerHTML = (pp / people_eu * 100).toFixed(3) + "%";
+    document.querySelector("#rate").innerHTML = ((pp / pp03 - 1) * 100).toFixed(3) + "%";
     document.querySelector("#people_03").innerHTML = ((pp - pp03) / 1000000).toFixed(2) + "Mio";
     document.querySelector(".chart").style.height = (pp / people_eu * 100) + "%";
-    console.log(pp);
-    console.log(pp03);
-    console.log(country);
+    // console.log(pp);
+    // console.log(pp03);
+    // console.log(country);   
 }
 //normal("Deutschland", people_deutschland, people_2003_deutschland);
 //normal("Italien", people_italien, people_2003_italien);
